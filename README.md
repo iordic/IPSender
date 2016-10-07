@@ -8,7 +8,7 @@ Simple commandline tool to send public ip through e-mail. Thought to run as serv
 * Set receiver address where program sends the IP.
 * If you aren't using gmail, change smtp config.
 
-## TODO
+## TO DO
 - [ ] Send e-mails to multiple addresses.
 - [ ] Use encryption for the password field.
 - [ ] PEP8 Style?
