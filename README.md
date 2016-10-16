@@ -11,4 +11,4 @@ Simple commandline tool to send public ip through e-mail. Thought to run as serv
 ## TO DO
 - [ ] Send e-mails to multiple addresses.
 - [ ] Use encryption for the password field.
-- [ ] PEP8 Style?
+- [x] PEP8 Style
