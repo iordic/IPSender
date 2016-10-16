@@ -18,7 +18,7 @@ def send_mail(language):
     # data:
     user = data['login']['user']
     password = data['login']['pass']
-    # password = base64.b64decode(password)  # Decode password
+    password = base64.b64decode(password)  # Decode password
     sender = data['sender']
     receivers = data['receivers']
 
