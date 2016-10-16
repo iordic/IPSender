@@ -35,7 +35,7 @@ def send_mail(language):
     server = smtplib.SMTP(server)
     server.starttls()
     server.login(user, password)
-    server.sendmail(sender, receiver, mime_message.as_string())
+    server.sendmail(sender, receiver.split(','), mime_message.as_string())
     server.quit()
 
 
