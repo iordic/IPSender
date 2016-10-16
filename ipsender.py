@@ -20,22 +20,24 @@ def send_mail(language):
     password = data['login']['pass']
     password = base64.b64decode(password)  # Decode password
     sender = data['sender']
-    receiver = data['receiver']
+    receivers = data['receivers']
     server = data['smtp']
     port = data['smtport']
     server = server + ':' + port  # Concatenate server and port
     pubip = extract_public_ip()  # Obtain public IP
     msg = data['language'][language]['message'] + pubip
-    # Formatting e-mail:
-    mime_message = MIMEText(msg, "plain")
-    mime_message["From"] = sender
-    mime_message["To"] = receiver
-    mime_message["Subject"] = data['language'][language]['subject']
-    # Sending e-mail:
     server = smtplib.SMTP(server)
     server.starttls()
     server.login(user, password)
-    server.sendmail(sender, receiver, mime_message.as_string())
+    for i in range(len(receivers)):
+        mime_message = MIMEText(msg.encode('utf-8'), "plain", 'utf-8')
+        mime_message["From"] = sender
+        mime_message["To"] = receivers[i]
+        mime_message["Subject"] = data['language'][language]['subject']
+        print receivers[i]
+        print type(mime_message)
+        print mime_message.as_string()
+        server.sendmail(sender, str(receivers[i]), mime_message.as_string())
     server.quit()
 
 
