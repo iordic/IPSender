@@ -9,6 +9,6 @@ Simple commandline tool to send public ip through e-mail. Thought to run as serv
 * If you aren't using gmail, change smtp config.
 
 ## TO DO
-- [ ] Send e-mails to multiple addresses.
+- [x] Send e-mails to multiple addresses.
 - [ ] Use encryption for the password field.
 - [x] PEP8 Style
