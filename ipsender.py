@@ -18,10 +18,9 @@ def send_mail(language):
     # data:
     user = data['login']['user']
     password = data['login']['pass']
-    password = base64.b64decode(password)  # Decode password
+    # password = base64.b64decode(password)  # Decode password
     sender = data['sender']
     receivers = data['receivers']
-    receivers = ', '.join(receivers)
 
     server = data['smtp']
     port = data['smtport']
@@ -37,7 +36,7 @@ def send_mail(language):
     server = smtplib.SMTP(server)
     server.starttls()
     server.login(user, password)
-    server.sendmail(sender, receivers, mime_message.as_string())
+    server.sendmail(sender, receivers.split(','), mime_message.as_string())
     server.quit()
 
 
