@@ -5,7 +5,7 @@
 		},
 	"login":{"user":"example@mail.com", "pass":"cGFzc3dvcmQ="},
 	"sender":"sender@mail.com",
-	"receiver":"receiver@mail.com",
+	"receivers":"receiver@mail.com,receiver2@mail.com",
 	"smtp":"smtp.gmail.com",
 	"smtport":"587"
 }

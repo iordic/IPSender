@@ -20,7 +20,8 @@ def send_mail(language):
     password = data['login']['pass']
     password = base64.b64decode(password)  # Decode password
     sender = data['sender']
-    receiver = data['receiver']
+    receivers = data['receivers']
+
     server = data['smtp']
     port = data['smtport']
     server = server + ':' + port  # Concatenate server and port
@@ -29,13 +30,13 @@ def send_mail(language):
     # Formatting e-mail:
     mime_message = MIMEText(msg, "plain")
     mime_message["From"] = sender
-    mime_message["To"] = receiver
+    mime_message["To"] = receivers
     mime_message["Subject"] = data['language'][language]['subject']
     # Sending e-mail:
     server = smtplib.SMTP(server)
     server.starttls()
     server.login(user, password)
-    server.sendmail(sender, receiver, mime_message.as_string())
+    server.sendmail(sender, receivers.split(','), mime_message.as_string())
     server.quit()
 
 
