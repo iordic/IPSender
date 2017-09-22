@@ -1,14 +1,15 @@
 # IPSender
-Simple commandline tool to send public ip through e-mail. Thought to run as service.
+Simple commandline tool to send public ip through e-mail.
+Thought to run as service.
 
 ## How to use?
-* Configure "mail.json" with your login credentials.
-	* Password requires base64 encoding, use codepass.py for this and encode your password.
-	![codepass](/img/screenshot.png)
-* Set receiver address where program sends the IP.
-* If you aren't using gmail, change smtp config.
+* Configure _config.json_ with your login credentials.
+See configuration section.
+* Execute _ipsender.py_ and it will do the job. :)
 
-## TO DO
-- [x] Send e-mails to multiple addresses.
-- [ ] Use encryption for the password field.
-- [x] PEP8 Style
+## Configuration
+To configure credentials and server configuration, type:
+```
+python ipsender.py -c
+```
+And then fill the questions.

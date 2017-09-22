@@ -1,0 +1,12 @@
+{
+	"login" : {
+		"user" : "example@mail.com",
+		"password" : "3uNKNIrecDo=",
+		"key" : "XgKx/Uc5gq4="
+	},
+	"sender" : "sender@mail.com",
+	"receiver" : "receiver@mail.com",
+	"protocol" : "smtp",
+	"server" : "smtp.gmail.com",
+	"port" : "587"
+}

@@ -1,0 +1,32 @@
+{
+  "messages" : [
+    {
+      "lang" : "en",
+      "text" : {
+        "subject" : "Current IP",
+        "ip" : "The public IP is: ",
+        "user" : "The logged user is: ",
+        "name" : "Computer name: ",
+        "os" : "Operating System: ",
+        "version" : "Version: ",
+        "release" : "Release: ",
+        "machine" : "Architecture: ",
+        "processor" : "Processor: "
+      }
+    },
+    {
+      "lang" : "es",
+      "text" : {
+        "subject" : "IP actual",
+        "ip" : "La IP publica es: ",
+        "user" : "El usuario identificado es: ",
+        "name" : "Nombre del ordenador: ",
+        "os" : "Sistema Operativo: ",
+        "version" : "Version: ",
+        "release" : "Release: ",
+        "machine" : "Arquitectura: ",
+        "processor" : "Procesador: "
+      }
+    }
+  ]
+}
